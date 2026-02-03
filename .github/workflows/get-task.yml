@@ -1,10 +1,7 @@
 name: Build and Push to ACR
 
-on:
-  push:
-    branches: [ ]
+on: []
     
-
 permissions:
   id-token: write
   contents: read
