@@ -1,8 +1,6 @@
-name: Build and Push to ACR
+name: Build and Push to ACR - UI
 
-on:
-  push:
-    branches: [ main ]
+on: []
     
 
 permissions:
