@@ -32,7 +32,7 @@ jobs:
           docker build -t delete-task DeleteTaskTodoMicroservice
       - name: Tag Docker Image for ACR
         run: |
-          docker tag get-task acrtodoappsaurav007.azurecr.io/delete-task:v1
+          docker tag delete-task acrtodoappsaurav007.azurecr.io/delete-task:v1
       - name: Push Docker Image to ACR
         run: |
           docker push acrtodoappsaurav007.azurecr.io/delete-task:v1
