@@ -55,12 +55,12 @@ module "aks" {
 }
 
 
-module "pip" {
-    depends_on = [module.rg]
-  source   = "../../modules/azurerm_public_ip"
-  pip_name = "pip-dev"
-  rg_name  = "rg-dev-todoapp-01"
-  location = "northeurope"
-  sku      = "Standard"
-  tags     = local.common_tags
-}
+# module "pip" {
+#     depends_on = [module.rg]
+#   source   = "../../modules/azurerm_public_ip"
+#   pip_name = "pip-dev"
+#   rg_name  = "rg-dev-todoapp-01"
+#   location = "northeurope"
+#   sku      = "Standard"
+#   tags     = local.common_tags
+# }
