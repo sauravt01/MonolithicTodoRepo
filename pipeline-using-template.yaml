@@ -1,16 +1,18 @@
+
+
 resources:
   repositories:
   - repository: PipelineTemplates
-    type: git
-    name: Cloud-Infrastructure/PipelineTemplates
+    type: github
+    name: sauravt01/PipelineTemplates
+    endpoint: con1
     ref: refs/heads/main
 
 
 trigger:
-- master
+- main
 
-pool:
-  vmImage: ubuntu-latest
+pool: Mera Pool
 
 jobs:
 - job: DemoJob
