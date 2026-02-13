@@ -1,0 +1,55 @@
+trigger: none
+
+schedules:
+- cron: "0 7 * * *"
+  displayName: Daily Sydney/Australia midnight build
+  branches:
+    include:
+    - master
+  always: true
+
+pool:
+  name: wmq-imp-uew11-std-linux-01
+  demands:
+  - java
+
+variables:
+  gradleWrapperFile: 'gradlew'
+  gradleOptions: '-DtestBusinessScenario'
+  gradleWorkingDirectory: '$(TargetEnv)'
+  testResultsFiles: '$(System.DefaultWorkingDirectory)/build/test-results/testBusinessScenario/*.xml'
+  logLevel: 'debug'
+  placementId: ''
+  story: ''
+  webDriverProfile: 'default.cancel'
+  targetEnv: 'tst'
+
+resources:
+  repositories:
+  - repository: RegressionsPipelineTemplates
+    type: git
+    name: cplacements/RegressionsPipelineTemplates
+    ref: 'refs/heads/master'
+
+jobs:
+- job: Run
+  displayName: ${{ variables.testRunTitle }}
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+  steps:
+  - checkout: cplacements/scenario-test
+    fetchDepth: 1
+
+  - template: nextgenregressions-platform.yml@RegressionsPipelineTemplates
+    parameters:
+      gradleWrapperFile: $(gradleWrapperFile)
+      gradleOptions: $(gradleOptions)
+      gradleWorkingDirectory: $(System.DefaultWorkingDirectory)
+      publishJUnitResults: $(publishJUnitResults)
+      testResultsFiles: $(testResultsFiles)
+      logLevel: $(logLevel)
+      placementId: $(placementId)
+      story: $(story)
+      webDriverProfile: $(webDriverProfile)
+      targetEnv: $(targetEnv)
+      product: $(product)
+      testRunTitle: $(testRunTitle)
