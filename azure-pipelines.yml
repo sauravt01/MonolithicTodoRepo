@@ -1,0 +1,20 @@
+stages:
+- stage: Stage1
+  jobs:
+  - job: Job1
+    steps:
+    - script: echo "Running Stage 1"
+
+- stage: Stage2
+  condition: false   # skip karna hai
+  jobs:
+  - job: Job2
+    steps:
+    - script: echo "Running Stage 2"
+
+- stage: Stage3
+  # condition: false   # skip karna hai
+  jobs:
+  - job: Job3
+    steps:
+    - script: echo "Running Stage 3"
