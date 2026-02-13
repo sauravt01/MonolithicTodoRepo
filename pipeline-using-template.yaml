@@ -2,7 +2,7 @@ resources:
   repositories:
   - repository: PipelineTemplates
     type: git
-    name: Saurav/PipelineTemplates
+    name: Cloud-Infrastructure/PipelineTemplates
     ref: refs/heads/main
 
 
