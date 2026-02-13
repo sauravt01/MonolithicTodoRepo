@@ -9,6 +9,7 @@ resources:
     ref: refs/heads/main
 
 
+
 trigger:
 - main
 
@@ -19,7 +20,3 @@ jobs:
   steps:
 
   - template: build-template.yml@PipelineTemplates
-    parameters:
-      projectName: "My Demo Project"
-      message: "Hello from Main Pipeline"
-
