@@ -6,5 +6,7 @@ stages:
   - job: Job1
     steps:
     - powershell: $(name)
-    # - powershell: $(X)
+    - powershell: $(X), $(Y)
+    - powershell: $(X) ` $(Z)
+    - powershell: $(x) | $(Y)
 
