@@ -5,8 +5,8 @@ stages:
   jobs:
   - job: Job1
     steps:
-    - powershell: $(name)
-    - powershell: $(X), $(Y)
-    - powershell: $(X) ` $(Z)
-    - powershell: $(x) | $(Y)
+    - powershell: echo $(name)
+    - powershell: echo $(X), $(Y)
+    - powershell: echo $(X) ` $(Z)
+    - powershell: echo $(x) | $(Y)
 
