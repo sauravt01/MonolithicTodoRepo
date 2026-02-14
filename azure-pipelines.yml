@@ -1,8 +1,8 @@
 variables: 
-  X: 10, 
-  Y: 20, 
-  Z: 30, 
-  name: Saurav
+  - name: X
+    value : 10, 
+    readonly: true
+
   
 pool: Mera Pool
 stages:
@@ -10,8 +10,8 @@ stages:
   jobs:
   - job: Job1
     steps:
-    - powershell: echo $(name)
-    - powershell: echo $(X), $(Y)
-    - powershell: echo $(X) ` $(Z)
-    - powershell: echo $(x) | $(Y)
+    - powershell: echo $(X)
+    # - powershell: echo $(X), $(Y)
+    # - powershell: echo $(X) ` $(Z)
+    # - powershell: echo $(x) | $(Y)
 
