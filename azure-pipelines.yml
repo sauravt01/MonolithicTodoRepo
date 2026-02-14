@@ -1,9 +1,10 @@
-variables: {X: 10, Y: 20}
+variables: {X: 10, Y: 20, Z: 30, name: Saurav}
 pool: Mera Pool
 stages:
 - stage: Stage1
   jobs:
   - job: Job1
     steps:
-    - script: echo $(X)
+    - powershell: $(name)
+    # - powershell: $(X)
 
