@@ -1,7 +1,4 @@
-variables: 
-  - name: X
-    value : 10, 
-    readonly: true
+
 
   
 pool: Mera Pool
@@ -9,6 +6,9 @@ stages:
 - stage: Stage1
   jobs:
   - job: Job1
+    variables:
+    - name: X
+      value: 10
     steps:
     - powershell: echo $(X)
     # - powershell: echo $(X), $(Y)
