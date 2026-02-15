@@ -1,4 +1,8 @@
-variables: {x: 10, y: 20, z: 30, name: 'saurav'}
+variables: 
+    x: 10, 
+    y: 20, 
+    z: 30, 
+    name: 'saurav'
 
   
 pool: Mera Pool
