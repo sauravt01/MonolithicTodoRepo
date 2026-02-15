@@ -1,12 +1,13 @@
-parameters:
-  - name: x
-    displayName: x naam ka parameter hai
-    type: string
-    default: gaurav
-    # values: 
-    # - " "
-    # - saurav
+resources:
+  repositories:
+  - repository: PipelineTemplates
+    type: github
+    endpoint: con1
+    name: Cloud-Infrastructure/PipelineTemplates
+    ref: main
+    
 
+    
 pool: Mera Pool
 stages:
   - stage: 
@@ -14,4 +15,4 @@ stages:
     jobs:
       - job: 
         steps:
-          - powershell: echo ${{ parameters.x }}
+        - template: build-template.yml@PipelineTemplates
