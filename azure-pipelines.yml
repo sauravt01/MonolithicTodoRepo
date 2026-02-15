@@ -5,7 +5,7 @@ variables:
     value: 20
   - name: z
     value: 30
-  - name: 'name'
+  - name: name
     value: 'saurav'
 
   
