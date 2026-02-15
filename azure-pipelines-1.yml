@@ -1,0 +1,16 @@
+parameters:
+  - name: x
+    displayName: x naam ka parameter hai
+    type: number
+    values:
+      - 10
+      - 20
+      - 30
+
+stages:
+  - stage: 
+    displayName: stage1
+    jobs:
+      - job: 
+        steps:
+          - powershell: echo ${{ parameter.x }}
