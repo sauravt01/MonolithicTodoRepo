@@ -3,8 +3,8 @@ resources:
   - repository: PipelineTemplates
     type: github
     endpoint: con1
-    name: Cloud-Infrastructure/PipelineTemplates
-    ref: main
+    name: sauravt01/PipelineTemplates
+    ref: refs/heads/main
     
 
     
