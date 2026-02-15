@@ -7,7 +7,7 @@ parameters:
       - 10
       - 20
       - 30
-
+pool: Mera Pool
 stages:
   - stage: 
     displayName: stage1
