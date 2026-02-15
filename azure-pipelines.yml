@@ -1,15 +1,15 @@
 variables: 
   - group: G34
-  - group: G35
-  # - template: azure-pipelines.yml
-  - name: x
-    value: 10 
-  - name: y
-    value: 20
-  - name: z
-    value: 30
-  - name: name
-    value: 'saurav'
+  # - group: G35
+  # # - template: azure-pipelines.yml
+  # - name: x
+  #   value: 10 
+  # - name: y
+  #   value: 20
+  # - name: z
+  #   value: 30
+  # - name: name
+  #   value: 'saurav'
 
   
 pool: Mera Pool
@@ -19,8 +19,8 @@ stages:
   - job: Job1
     
     steps:
-    - powershell: echo $(x)
-    - powershell: echo $(x), $(y)
-    - powershell: echo $(x) ` $(z)
-    - powershell: echo $(name)
+    - powershell: echo $(Q)
+    - powershell: echo $(P), $(lastname)
+    # - powershell: echo $(x) ` $(z)
+    # - powershell: echo $(name)
 
