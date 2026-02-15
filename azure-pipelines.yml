@@ -1,8 +1,12 @@
 variables: 
-    x: 10, 
-    y: 20, 
-    z: 30, 
-    name: 'saurav'
+  - name: x
+    value: 10 
+  - name: y
+    value: 20
+  - name: z
+    value: 30
+  - name: 'name'
+    value: 'saurav'
 
   
 pool: Mera Pool
