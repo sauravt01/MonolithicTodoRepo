@@ -1,6 +1,6 @@
 variables: 
   - group: G34
-  # - group: G35
+  - group: G35
   # # - template: azure-pipelines.yml
   # - name: x
   #   value: 10 
@@ -21,6 +21,7 @@ stages:
     steps:
     - powershell: echo $(Q)
     - powershell: echo $(P), $(lastname)
-    # - powershell: echo $(x) ` $(z)
+
+    - powershell: echo $(add) ` $(L)
     # - powershell: echo $(name)
 
