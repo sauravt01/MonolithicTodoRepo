@@ -5,7 +5,7 @@ resources:
     endpoint: con1
     name: sauravt01/PipelineTemplates
     ref: refs/heads/main
-    
+ 
 
     
 pool: Mera Pool
@@ -16,3 +16,6 @@ stages:
       - job: 
         steps:
         - template: build-template.yml@PipelineTemplates
+          parameters:
+            x: 10
+
