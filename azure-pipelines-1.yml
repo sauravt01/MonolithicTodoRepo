@@ -2,9 +2,11 @@ parameters:
   - name: x
     displayName: x naam ka parameter hai
     type: string
-    default: " "
-    values: 
-    - " "
+    default: gaurav
+    # values: 
+    # - " "
+    # - saurav
+
 pool: Mera Pool
 stages:
   - stage: 
