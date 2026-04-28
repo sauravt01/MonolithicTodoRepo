@@ -1,39 +1,17 @@
-trigger: none
-variables: 
-  - group: G34
-  # # - template: azure-pipelines.yml
-  # - name: x
-  #   value: 10 
-  # - name: y
-  #   value: 20
-  # - name: z
-  #   value: 30
-  # - name: name
-  #   value: 'saurav'
+trigger: 
+ branches:
+   include:
+     - main
+   exclude:
+     - 
 
-  
-pool: Mera Pool
+pool:
+name: Mera_Pool
+
 stages:
-- stage: Stage1
-  jobs:
-  - job: Job1
-    
-    steps:
-    - powershell: echo $(Q)
-    - powershell: echo $(P), $(lastname)
-
-    - powershell: echo $(add) ` $(L)
-    # - powershell: echo $(name)
-
-- stage: stage2 
-  jobs:
-    - job: 
-      variables:
-      - group: G35
-      steps:
-        - powershell: echo $(L)
-        - powershell: echo $(P)
-         
- 
-
-
+  - stage: 
+    displayName: Scanning_Stage
+    jobs:
+      - job: 
+        steps:
+          - j
